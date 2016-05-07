@@ -103,12 +103,21 @@ nav.main {
 		}
 	}
 }
+.subnav.fixed {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0px 1px 3px 0px rgba(black, 0.2);
+    transition: all 0.2s ease-in-out;
+}
 
 /*--------------------------------------------------------------
 # Section: About
 --------------------------------------------------------------*/
-.about {
-	//
+.about,
+.section-2 {
+	height: 1200px;
 }
 
 
