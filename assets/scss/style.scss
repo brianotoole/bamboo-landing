@@ -1,16 +1,28 @@
-// Colors; inherited from: https://www.google.com/design/spec/style/color.html#color-color-palette
-$main: #1976D2; //blue 700
-$accent: #0D47A1; //blue 900
+// Colors
+$primary: #1cad7e; //forest green
+$accent: #0D47A1; 
+
+$black: #4c4643;
+$border: #dbdbdb;
 
 // Sizings
-$xl: 1.5em;
-$lg: 1.25em;
-$md: 1.15em;
-$default: 1em;
-$sm: 0.85em;
+$font-xl: 1.5em;
+$font-lg: 1.25em;
+$font-md: 1.15em;
+$font-default: 1em;
+$font-sm: 0.85em;
 
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600');
+$font-heading: 'Open Sans', Verdana, Arial;
+$font-body: 'Open Sans', serif, Helvetica;
 
-$font-heading: 'Open+Sans', sans-serif, Helvetica;
-//$font-body: 'Josefin Sans', Verdana, Arial;
+
+// Vendors
+@import 'normalize';
+@import 'bootstrap-grid-only';
+//@import 'font-icon';
+
+// Layout
+@import "base";
+@import "layout";

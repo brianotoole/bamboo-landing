@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+header.site {
+	background-color: transparent;
+}
+.branding {
+    .logo {
+        width: 115px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+	}	
+}
+
+
+
+nav.main {
+    float: right;
+    margin-top: 25px;
+    background-color: transparent;
+    ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+    }
+    li {
+        display: inline-block;
+        a {
+	        color: white;
+	        font-weight: 100;
+	        letter-spacing: 1px;
+	        text-transform: uppercase;
+	        text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        + li a {
+	        margin-left: 20px;
+        }
+    }
+}
+/*--------------------------------------------------------------
+# Section: Hero
+--------------------------------------------------------------*/
+.hero {
+	position: relative;
+	padding-bottom: 110px;
+	text-align: left;
+	background-color: transparent;	
+	.intro {
+		color: white;
+		
+		> p {
+			margin-bottom: 35px;
+			font-size: $font-lg;
+		}
+	}
+	
+}
