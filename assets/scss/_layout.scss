@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Header & Main Navigation
+--------------------------------------------------------------*/
 header.site {
 	background-color: transparent;
 }
@@ -38,6 +42,7 @@ nav.main {
         }
     }
 }
+
 /*--------------------------------------------------------------
 # Section: Hero
 --------------------------------------------------------------*/
@@ -56,3 +61,55 @@ nav.main {
 	}
 	
 }
+
+/*--------------------------------------------------------------
+# Section: Subnav
+--------------------------------------------------------------*/
+.subnav-wrapper {
+    height: 65px;
+    overflow: inherit;
+    background-color: white;
+    overflow: hidden;
+}
+.subnav {
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid $border;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	ul.flex {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+		@media (max-width: $screen-sm) {
+			flex-direction: column; //stack
+		}
+		li {
+		    min-width: inherit;
+		}
+		li a {
+			display: block;
+			padding: 20px 0;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $grey;
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Section: About
+--------------------------------------------------------------*/
+.about {
+	//
+}
+
+
+

@@ -3,6 +3,7 @@ $primary: #1cad7e; //forest green
 $accent: #0D47A1; 
 
 $black: #4c4643;
+$grey: #9B9B9B;
 $border: #dbdbdb;
 
 // Sizings
@@ -11,6 +12,9 @@ $font-lg: 1.25em;
 $font-md: 1.15em;
 $font-default: 1em;
 $font-sm: 0.85em;
+
+// Screen sizes
+$screen-sm: 768px;
 
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600');

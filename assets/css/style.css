@@ -582,6 +582,10 @@ img.pad-top { padding-top: 1em; }
 /* Major classes, positioning */
 .contain { height: 100%; max-width: 1100px; margin-left: auto; margin-right: auto; padding-right: 20px; padding-left: 20px; }
 
+.section { padding: 90px 0; background-color: white; border-bottom: 1px solid #dbdbdb; }
+
+@media (max-width: 768px) { .section { padding: 30px 0; } }
+
 .absolute { position: absolute; z-index: 1004; }
 
 .centered { max-width: 70%; margin: 0 auto; padding-top: 2em; padding-bottom: 1em; text-align: center; }
@@ -620,6 +624,9 @@ img.pad-top { padding-top: 1em; }
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header & Main Navigation
+--------------------------------------------------------------*/
 header.site { background-color: transparent; }
 
 .branding .logo { width: 115px; margin-top: 20px; margin-bottom: 20px; }
@@ -642,4 +649,27 @@ nav.main li + li a { margin-left: 20px; }
 .hero .intro { color: white; }
 
 .hero .intro > p { margin-bottom: 35px; font-size: 1.25em; }
+
+/*--------------------------------------------------------------
+# Section: Subnav
+--------------------------------------------------------------*/
+.subnav-wrapper { height: 65px; overflow: inherit; background-color: white; overflow: hidden; }
+
+.subnav { width: 100%; background-color: white; border-bottom: 1px solid #dbdbdb; }
+
+.subnav ul { margin: 0; padding: 0; }
+
+.subnav ul.flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
+
+@media (max-width: 768px) { .subnav ul.flex { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; } }
+
+.subnav ul.flex li { min-width: inherit; }
+
+.subnav ul.flex li a { display: block; padding: 20px 0; text-align: center; text-transform: uppercase; text-decoration: none; color: #9B9B9B; }
+
+.subnav ul.flex li a.active { color: #1cad7e; }
+
+/*--------------------------------------------------------------
+# Section: About
+--------------------------------------------------------------*/
 /*# sourceMappingURL=style.css.map */
