@@ -1,0 +1,16 @@
+// Colors; inherited from: https://www.google.com/design/spec/style/color.html#color-color-palette
+$main: #1976D2; //blue 700
+$accent: #0D47A1; //blue 900
+
+// Sizings
+$xl: 1.5em;
+$lg: 1.25em;
+$md: 1.15em;
+$default: 1em;
+$sm: 0.85em;
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600');
+
+$font-heading: 'Open+Sans', sans-serif, Helvetica;
+//$font-body: 'Josefin Sans', Verdana, Arial;
