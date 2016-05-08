@@ -612,6 +612,8 @@ img.pad-top { padding-top: 1em; }
 .bg-white { background-color: white; }
 
 /* Weights */
+.text-reset { font-weight: 100; }
+
 .text-bold { font-weight: 700; }
 
 .text-reset { font-weight: 400; }
@@ -627,26 +629,38 @@ img.pad-top { padding-top: 1em; }
 /*--------------------------------------------------------------
 # Header & Main Navigation
 --------------------------------------------------------------*/
-header.site { background-color: transparent; }
+header.site { background-color: transparent; border-bottom: 1px solid white; }
 
-.branding .logo { width: 115px; margin-top: 20px; margin-bottom: 20px; }
+.branding { display: inline-block; margin-top: 20px; margin-bottom: 20px; text-decoration: none; /*.logo { width: 115px; }*/ }
 
-nav.main { float: right; margin-top: 25px; background-color: transparent; }
+@media (max-width: 480px) { .branding { display: block; text-align: center; } }
+
+.branding span { color: white; font-size: 1.25em; font-weight: 100; }
+
+nav.main { float: right; margin-top: 24px; background-color: transparent; }
+
+@media (max-width: 480px) { nav.main { float: none; margin-bottom: 24px; text-align: center; } }
 
 nav.main ul { margin: 0; padding: 0; list-style: none; }
 
 nav.main li { display: inline-block; }
 
-nav.main li a { color: white; font-weight: 100; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+nav.main li a { position: relative; color: white; font-weight: 100; letter-spacing: 1px; text-decoration: none; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+
+nav.main li a:hover { color: #dbdbdb; }
+
+nav.main li a:before { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background-color: #dbdbdb; visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); -webkit-transition: all 0.3s ease-in-out 0s; transition: all 0.3s ease-in-out 0s; }
+
+nav.main li a:hover:before { visibility: visible; -webkit-transform: scaleX(1); transform: scaleX(1); }
 
 nav.main li + li a { margin-left: 20px; }
 
 /*--------------------------------------------------------------
 # Section: Hero
 --------------------------------------------------------------*/
-.hero { position: relative; padding-bottom: 110px; text-align: left; background-color: transparent; }
+.hero { position: relative; padding-bottom: 180px; text-align: left; background: -webkit-linear-gradient(#1cad7e, rgba(28, 173, 126, 0.6)), url("../img/bg-hero.jpg") 0 0 no-repeat; background: linear-gradient(#1cad7e, rgba(28, 173, 126, 0.6)), url("../img/bg-hero.jpg") 0 0 no-repeat; background-size: cover; }
 
-.hero .intro { color: white; }
+.hero .intro { padding-top: 60px; color: white; }
 
 .hero .intro > p { margin-bottom: 35px; font-size: 1.25em; }
 
@@ -654,6 +668,8 @@ nav.main li + li a { margin-left: 20px; }
 # Section: Subnav
 --------------------------------------------------------------*/
 .subnav-wrapper { height: 65px; overflow: inherit; background-color: white; overflow: hidden; }
+
+@media (max-width: 768px) { .subnav-wrapper { height: auto; } }
 
 .subnav { width: 100%; background-color: white; border-bottom: 1px solid #dbdbdb; }
 
@@ -665,9 +681,9 @@ nav.main li + li a { margin-left: 20px; }
 
 .subnav ul.flex li { min-width: inherit; }
 
-.subnav ul.flex li a { display: block; padding: 20px 0; text-align: center; text-transform: uppercase; text-decoration: none; color: #9B9B9B; }
+.subnav ul.flex li a { display: block; padding: 20px 10px; line-height: 1; text-align: center; text-transform: uppercase; text-decoration: none; color: #9B9B9B; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-.subnav ul.flex li a.active { color: #1cad7e; }
+.subnav ul.flex li a:hover, .subnav ul.flex li a.active { color: #4c4643; background-color: #e6e6e6; }
 
 .subnav.fixed { position: fixed; top: 0; width: 100%; z-index: 99999; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
