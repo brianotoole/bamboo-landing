@@ -91,7 +91,9 @@ nav.main {
 	.intro {
 		padding-top: 60px;
 		color: white;
-		
+		.title {
+			color: white;
+		}
 		> p {
 			margin-bottom: 35px;
 			font-size: $font-lg;
@@ -126,7 +128,7 @@ nav.main {
 		flex-direction: row;
 		justify-content: space-around;
 		@media (max-width: $screen-sm) {
-			flex-direction: column; //stack
+			flex-direction: column; //stack items vertically
 		}
 		li {
 		    min-width: inherit;
@@ -145,6 +147,10 @@ nav.main {
 				color: $black;
 				background-color: darken(white,10%);
 			}
+			@media (max-width: $screen-sm) {
+			    padding-left: 0;
+			    padding-right: 0;
+		    }
 		}
 	}
 }
@@ -160,9 +166,48 @@ nav.main {
 /*--------------------------------------------------------------
 # Section: About
 --------------------------------------------------------------*/
-.about,
-.section-2 {
-	height: 1200px;
+.about {
+	height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Section: two
+--------------------------------------------------------------*/
+.two {
+	background-color: $primary;
+	height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Section: three
+--------------------------------------------------------------*/
+.three {
+	background-color: $accent;
+	height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Section: four
+--------------------------------------------------------------*/
+.four {
+	background-color: $black;
+	height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Section: five
+--------------------------------------------------------------*/
+.five {
+	background-color: $grey;
+	height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Section: six
+--------------------------------------------------------------*/
+.six {
+	background-color: $primary;
+	height: 100vh;
 }
 
 
