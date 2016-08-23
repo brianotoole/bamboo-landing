@@ -1,3 +1,9 @@
 .sass-cache
 */.sass-cache
 .DS_Store
+node_modules/
+
+wp-config.php
+wp-content/themes/twentyfifteen/
+wp-content/plugins/hello.php
+wp-content/plugins/index.php
