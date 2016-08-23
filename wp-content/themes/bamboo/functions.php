@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Bamboo Theme functions and definitions.
  *
@@ -103,16 +103,41 @@ add_action( 'widgets_init', 'bamboo_widgets_init' );
  */
 function bamboo_scripts() {
     // Theme Stylescript - uses Sass, compiles to "style.css"; Main file found in "/assets/scss/style.scss"
-	wp_enqueue_style( 'bamboo-style', get_stylesheet_uri(), array(), 'v1.0.0');
+	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), 'v1.0.0');
+	
+	// Theme jQuery - v2.2.3 (served via CloudFlare CDN)
+	wp_enqueue_script( 'theme-jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js', array(), 'v1.0.0', true );
+	
 	// Theme Javascript - Compiles to "/assets/js/min/theme-min.js"; Main file found in "/assets/js/theme.js"
-	wp_enqueue_script( 'bamboo-navigation', get_template_directory_uri() . '/assets/js/min/theme-min.js', array(), 'v1.0.0', true );
+	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/assets/js/min/theme-min.js', array(), 'v1.0.0', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
+
 add_action( 'wp_enqueue_scripts', 'bamboo_scripts' );
+
+/**
+ * Init loading-js script to footer
+ */
+function init_loader_script() {
+?>
+<script type="text/javascript">
+$("#fakeloader").fakeLoader({
+timeToHide:1000, //Time in milliseconds for fakeLoader disappear
+//zIndex:"999",//Default zIndex
+spinner:"spinner3",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+bgColor:"#0D47A1" //Hex, RGB or RGBA colors
+//imagePath:"yourPath/customizedImage.gif"
+});
+</script>
+<?php
+}
+add_action( 'wp_footer', 'init_loader_script', 900 );
+
 
 /**
  * Implement the Custom Header feature.
