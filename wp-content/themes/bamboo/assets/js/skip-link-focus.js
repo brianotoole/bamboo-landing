@@ -1,10 +1,7 @@
-/**
- * File skip-link-focus-fix.js.
- *
- * Helps with accessibility for keyboard only users.
- *
- * Learn more: https://git.io/vWdr2
- */
+/*--------------------------------------------------------------
+# Skip Link Focus - Helps with accessibility for keyboard users
+# https://git.io/vWdr2
+--------------------------------------------------------------*/
 ( function() {
 	var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 	    isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,

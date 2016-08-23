@@ -1,10 +1,7 @@
-/**
- * File customizer.js.
- *
- * Theme Customizer enhancements for a better user experience.
- *
- * Contains handlers to make Theme Customizer preview reload changes asynchronously.
- */
+/*--------------------------------------------------------------
+# Theme Customizer - handlers to make customizations inside WP
+# https://git.io/vWdr2
+--------------------------------------------------------------*/
 
 ( function( $ ) {
 

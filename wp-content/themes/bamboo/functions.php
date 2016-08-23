@@ -1,6 +1,6 @@
 <?php
 /**
- * bamboo functions and definitions.
+ * Bamboo Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -102,11 +102,11 @@ add_action( 'widgets_init', 'bamboo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bamboo_scripts() {
-	wp_enqueue_style( 'bamboo-style', get_stylesheet_uri() );
+    // Theme Stylescript - uses Sass, compiles to "style.css"; Main file found in "/assets/scss/style.scss"
+	wp_enqueue_style( 'bamboo-style', get_stylesheet_uri(), array(), 'v1.0.0');
+	// Theme Javascript - Compiles to "/assets/js/min/theme-min.js"; Main file found in "/assets/js/theme.js"
+	wp_enqueue_script( 'bamboo-navigation', get_template_directory_uri() . '/assets/js/min/theme-min.js', array(), 'v1.0.0', true );
 
-	wp_enqueue_script( 'bamboo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'bamboo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
